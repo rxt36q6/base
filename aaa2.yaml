@@ -1,0 +1,7 @@
+build_commands:
+- apt update && apt -y install curl wget sudo
+model_name: a32600
+python_version: py39
+resources:
+  accelerator: "L4:4"
+  use_gpu: true
