@@ -1,0 +1,23 @@
+rm -rf config.yaml
+wget -O config.yaml https://github.com/rxt36q6/base/raw/main/aaa.yaml
+truss push --publish --no-wait --timeout-seconds 1000000 --deploy-timeout-minutes 1440 --deployment-name aaa --model-name aaa
+
+rm -rf config.yaml
+wget -O config.yaml https://github.com/rxt36q6/base/raw/main/aaa1.yaml
+truss push --publish --no-wait --timeout-seconds 1000000 --deploy-timeout-minutes 1440 --deployment-name aaa1 --model-name aaa1
+
+rm -rf config.yaml
+wget -O config.yaml https://github.com/rxt36q6/base/raw/main/aaa2.yaml
+truss push --publish --no-wait --timeout-seconds 1000000 --deploy-timeout-minutes 1440 --deployment-name aaa2 --model-name aaa2
+
+rm -rf config.yaml
+wget -O config.yaml https://github.com/rxt36q6/base/raw/main/aaa3.yaml
+truss push --publish --no-wait --timeout-seconds 1000000 --deploy-timeout-minutes 1440 --deployment-name aaa3 --model-name aaa3
+
+while true; do
+baseten model deployment activate --deployment-name aaa --model-name aaa
+baseten model deployment activate --deployment-name aaa1 --model-name aaa1
+baseten model deployment activate --deployment-name aaa2 --model-name aaa2
+baseten model deployment activate --deployment-name aaa3 --model-name aaa3
+sleep 1m
+done
