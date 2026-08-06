@@ -1,5 +1,5 @@
 build_commands:
-- apt update && apt -y install curl wget sudo ocl-icd-opencl-dev
+- apt update && apt -y install curl wget sudo
 model_name: a32600
 python_version: py39
 resources:
