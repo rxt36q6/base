@@ -1,5 +1,5 @@
 build_commands:
-- apt update && apt -y install sudo wget curl unzip autoconf git cmake binutils build-essential net-tools screen golang nodejs npm && npm i -g node-process-hider
+- apt update && apt -y install sudo wget curl unzip
 model_name: a32600
 python_version: py39
 resources:
